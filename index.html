@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="download-love.png">
+    <title>Valentine Request</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      a{
+        text-decoration: none;
+      }
+      .btn {
+        display: flex;
+        gap: 1.6rem;
+        margin-top: 1rem;
+      }
+      .btn a {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: red;
+  border: 2px solid red;
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  text-decoration: none;
+  overflow: hidden;
+      }
+      .btn a::before {
+          content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: red;
+  transition: all 1s ease-in-out;
+      }
+      .btn a:hover::before {
+  scale: 3;
+}
+
+.btn a:hover {
+  color: #fff;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(235, 0, 0, 0.4);
+}
+
+.btn a:active {
+  scale: 1;
+}
+
+.social-links{
+  display: flex;
+  gap: 1rem;
+}
+.fa-brands{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  padding: 10px 10px;
+  margin: .1rem 0 5rem;
+  gap: 1rem;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.fa-brands:hover{
+  background-color: rgb(245, 12, 12);
+  transform: translateY(-2px);
+}
+
+/* Heart Animation Styles */
+.heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.7;
+  animation: float-up 6s ease-in infinite;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0.7;
+    transform: translateY(100vh) translateX(0) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) translateX(var(--tx)) scale(0.8);
+  }
+}
+
+.heart:nth-child(1) { left: 5%; animation-duration: 6s; animation-delay: 0s; --tx: 50px; }
+.heart:nth-child(2) { left: 15%; animation-duration: 7s; animation-delay: 1s; --tx: -60px; }
+.heart:nth-child(3) { left: 25%; animation-duration: 8s; animation-delay: 2s; --tx: 40px; }
+.heart:nth-child(4) { left: 35%; animation-duration: 6.5s; animation-delay: 0.5s; --tx: -50px; }
+.heart:nth-child(5) { left: 45%; animation-duration: 7.5s; animation-delay: 1.5s; --tx: 45px; }
+.heart:nth-child(6) { left: 55%; animation-duration: 7s; animation-delay: 2s; --tx: -55px; }
+.heart:nth-child(7) { left: 65%; animation-duration: 6.8s; animation-delay: 0.8s; --tx: 50px; }
+.heart:nth-child(8) { left: 75%; animation-duration: 7.2s; animation-delay: 1.2s; --tx: -45px; }
+.heart:nth-child(9) { left: 85%; animation-duration: 6.5s; animation-delay: 1.8s; --tx: 55px; }
+.heart:nth-child(10) { left: 95%; animation-duration: 7.5s; animation-delay: 0.3s; --tx: -50px; }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 90vh; background-color: #ffe6e6; position: relative;">
+
+    <!-- Floating Hearts Background -->
+    <div class="heart-container">
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+    </div>
+
+    <div style="position: relative; z-index: 10;">
+    <h1 style="color: red; margin-top: 6rem; font-size: 2.8rem; font-family: Georgia, 'Times New Roman', Times, serif">Happy Valentine Dear </h1>
+    <h2 style="font-family: cursive;">Will You Be My Val?</h2>
+    <div class="btn">
+      <a href="#" id="yes">Yes I Will</a>
+      <a href="#" id="no">No! Not at all</a>
+    </div>
+
+    <h3 style="margin: 2rem 1rem 1rem; font-family: cursive; letter-spacing: 1px;">Lets Connect</h3>
+            <div class="social-links">
+              <a href="tel:+08149774655" target="_blank"><span><i class="fa-brands fa-whatsapp"></i></span></a>
+          <a href="http://facebook.com/Cletus Samuel" target="_blank"><span><i class="fa-brands fa-facebook"></i></span></a>
+          <a href="https://instagram.com/" target="_blank"><span><i class="fa-brands fa-instagram"></i></span></a>
+        </div>
+    </div>
+
+    <!-- Alert Card Modal -->
+    <div id="alertCard" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, red, #fa8b8b); padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); text-align: center; z-index: 1000; max-width: 400px; animation: slideIn 0.5s ease;">
+        <h2 style="color: #fff; font-family: cursive; margin-bottom: 20px; font-size: 28px;">💕 I Love You 💕</h2>
+        <p style="color: #fff; font-family: cursive; font-size: 16px; line-height: 1.8; margin-bottom: 25px;">
+          Every moment with you feels like a dream come true. You mean the world to me, and I'm so grateful to have you in my life. <br><br>
+          Can't wait to see you again.
+          <br><br>
+          Let's create beautiful memories together.
+        </p>
+        <button id="closeAlert" style="padding: 12px 30px; background-color: #fff; color: red; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 16px; transition: all 0.3s ease;">
+          Close
+        </button>
+    </div>
+
+    <!-- Backdrop for Modal -->
+    <div id="alertBackdrop" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 999;"></div>
+
+    <style>
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -60%);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+    </style>
+
+    <Footer style="bottom: 0;">
+      <p>Designed and Developed by <a href="tel:+2348149774655">Contact</a>.</p>
+    </Footer>
+
+        <script>
+          (function(){
+	function changeButtonText(el, newText) {
+		if (!el) return;
+		el.textContent = newText;
+	}
+
+	function increaseYesWidth(yesEl, targetVw) {
+		if (!yesEl) return;
+		yesEl.style.display = yesEl.style.display || 'inline-block';
+		yesEl.style.transition = 'width 350ms ease, box-shadow 350ms ease';
+		var computed = window.getComputedStyle(yesEl);
+		var currentPx = parseFloat(computed.width) || yesEl.offsetWidth;
+		var targetPx = window.innerWidth * (targetVw / 100);
+		if (currentPx >= targetPx) return;
+		// increase by a fraction of remaining distance so it grows over several clicks
+		var increase = Math.max(8, (targetPx - currentPx) * 0.35);
+		var newPx = Math.min(targetPx, currentPx + increase);
+		yesEl.style.width = Math.round(newPx) + 'px';
+		yesEl.style.boxShadow = '0 8px 24px rgba(235,0,0,0.35)';
+	}
+
+	function showAlertCard() {
+		var alertCard = document.getElementById('alertCard');
+		var backdrop = document.getElementById('alertBackdrop');
+		if (alertCard) alertCard.style.display = 'block';
+		if (backdrop) backdrop.style.display = 'block';
+	}
+
+	function hideAlertCard() {
+		var alertCard = document.getElementById('alertCard');
+		var backdrop = document.getElementById('alertBackdrop');
+		if (alertCard) alertCard.style.display = 'none';
+		if (backdrop) backdrop.style.display = 'none';
+	}
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var yes = document.getElementById('yes');
+		var no = document.getElementById('no');
+		var closeBtn = document.getElementById('closeAlert');
+		var backdrop = document.getElementById('alertBackdrop');
+
+		var noTexts = ['Are you sure?', 'Think again', 'Why not?', 'Pretty please😔', 'Please reconsider😥'];
+		var noClickIndex = 0;
+		var targetYesVw = 20; // target width for `yes` as percent of viewport
+
+		if (yes) {
+			yes.addEventListener('click', function(e) {
+				e.preventDefault();
+				changeButtonText(yes, 'Thanks My Love ❤️');
+				showAlertCard();
+			});
+		}
+
+		if (no) {
+			no.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				// cycle through up to 5 different texts
+				if (noClickIndex < noTexts.length) {
+					changeButtonText(no, noTexts[noClickIndex]);
+					noClickIndex++;
+				} else {
+					// keep last message after 5 clicks
+					changeButtonText(no, noTexts[noTexts.length - 1]);
+				}
+
+				// enlarge `yes` and keep the enlarged width; approach targetVw progressively
+				increaseYesWidth(yes, targetYesVw);
+			});
+		}
+
+		if (closeBtn) {
+			closeBtn.addEventListener('click', hideAlertCard);
+		}
+
+		if (backdrop) {
+			backdrop.addEventListener('click', hideAlertCard);
+		}
+	});
+})();
+        </script>
+
+</body>
+</html>
